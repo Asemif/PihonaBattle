@@ -1,7 +1,6 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://bgi6lhokct81w"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bgi6lhokct81w"]
 
 [ext_resource type="Texture2D" uid="uid://bjdjjevwfaftx" path="res://sprites/tilesets/antarctic.png" id="1_71lj1"]
-[ext_resource type="PackedScene" uid="uid://bsru02op2l2fm" path="res://scenes/Coin.tscn" id="2_cmxjg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eccin"]
 texture = ExtResource("1_71lj1")
@@ -362,10 +361,6 @@ texture = ExtResource("1_71lj1")
 9:9/0/physics_layer_0/angular_velocity = 0.0
 9:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_ehp0d"]
-scenes/1/scene = ExtResource("2_cmxjg")
-
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_eccin")
-sources/1 = SubResource("TileSetScenesCollectionSource_ehp0d")
