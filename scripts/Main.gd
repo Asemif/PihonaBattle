@@ -6,6 +6,8 @@ func set_level(level_name):
 		
 	add_child(load("res://levels/"+level_name+".tscn").instantiate())
 	add_child(load("res://scenes/Player.tscn").instantiate())
+	
+	$Player.position = GlobalLevel.spawn_pos
 
 func _ready():
 	set_level(GlobalLevel.level_name)
