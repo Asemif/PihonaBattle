@@ -1,15 +1,25 @@
 extends CharacterBody2D
 
-
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+var hp = 3
 
 func _physics_process(delta):
 	# Add the gravity.
+	
+	print(position.y)
+	
+	if position.y >= 700:
+		hp = 0
+	
+	if hp == 0:
+		hp = 3
+		position = GlobalLevel.spawn_pos
+	
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
