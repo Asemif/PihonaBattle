@@ -17,6 +17,11 @@ func _physics_process(delta):
 		
 	$HPLabel.text = str(hp)
 		
+	if $"/root/Main/Player".get_node("Sprite2D").flip_h:
+		$Sprite2D.flip_h = false
+	elif $"/root/Main/Player".get_node("Sprite2D").flip_h == false:
+		$Sprite2D.flip_h = true
+	
 	if hp <= 0:
 		enemy.enemy = null
 		queue_free()
