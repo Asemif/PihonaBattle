@@ -11,12 +11,15 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var damage_speed = 1
 
 var direction = 1
+var enemy
 
 func _ready():
 	$Timer.wait_time = damage_speed
 	
 func _physics_process(delta):
 	# Add the gravity.
+	
+	$HPLabel.text = str(hp)
 	
 	if position.y >= 700:
 		hp = 0
@@ -39,10 +42,11 @@ func _physics_process(delta):
 	if direction == 1: $Sprite2D.flip_h = false
 	elif direction == -1: $Sprite2D.flip_h = true
 	
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	if enemy == null:
+		if direction:
+			velocity.x = direction * SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
 
@@ -53,3 +57,10 @@ func _on_area_2d_body_entered(body):
 	if body.is_in_group("badguy"):
 		body.enemy = self
 		body.get_node("Timer").start()
+		
+		enemy = body
+		$Timer.start()
+
+func _on_timer_timeout():
+	if enemy != null:
+		enemy.hp -= damage

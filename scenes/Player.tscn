@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://mvhfrtl0ln5l"]
+[gd_scene load_steps=6 format=3 uid="uid://mvhfrtl0ln5l"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_5s2e2"]
 [ext_resource type="Texture2D" uid="uid://bhnx4ea1ksh5e" path="res://sprites/player/test.png" id="2_87udn"]
+[ext_resource type="FontFile" uid="uid://bel6ai2sky0ao" path="res://fonts/Pixel.ttf" id="3_ppmh2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b7nfu"]
 size = Vector2(34, 46)
@@ -30,4 +31,17 @@ debug_color = Color(0.701961, 0, 0, 0.419608)
 
 [node name="Timer" type="Timer" parent="."]
 
+[node name="HPLabel" type="Label" parent="."]
+offset_left = -17.0
+offset_top = -44.0
+offset_right = 17.0
+offset_bottom = -21.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3_ppmh2")
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

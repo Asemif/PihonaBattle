@@ -14,6 +14,12 @@ func _ready():
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		
+	$HPLabel.text = str(hp)
+		
+	if hp <= 0:
+		enemy.enemy = null
+		queue_free()
 
 func _on_timer_timeout():
 	enemy.hp -= damage
