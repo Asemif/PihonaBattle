@@ -41,6 +41,11 @@ jump={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Blocks, Players"
+2d_physics/layer_2="Flip"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
