@@ -1,7 +1,8 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://cqs2c63ax1iti"]
+[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://cqs2c63ax1iti"]
 
 [ext_resource type="Texture2D" uid="uid://bjdjjevwfaftx" path="res://sprites/tilesets/antarctic.png" id="1_71lj1"]
 [ext_resource type="PackedScene" uid="uid://bsru02op2l2fm" path="res://scenes/Flip.tscn" id="2_tom6c"]
+[ext_resource type="PackedScene" uid="uid://dbda6ouipunpm" path="res://scenes/TestBadguy.tscn" id="3_snmqp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eccin"]
 texture = ExtResource("1_71lj1")
@@ -364,6 +365,7 @@ texture = ExtResource("1_71lj1")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_t14hk"]
 scenes/1/scene = ExtResource("2_tom6c")
+scenes/2/scene = ExtResource("3_snmqp")
 
 [resource]
 physics_layer_0/collision_layer = 1

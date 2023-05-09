@@ -1,3 +1,3 @@
 # Strike Force Pihona
 
-Like strike force kitty but it's about penguins
+Like Strike Force Kitty but it's about penguins

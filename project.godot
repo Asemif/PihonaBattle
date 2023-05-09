@@ -45,6 +45,7 @@ jump={
 
 2d_physics/layer_1="Blocks, Players"
 2d_physics/layer_2="Flip"
+2d_physics/layer_3="Badguy"
 
 [rendering]
 

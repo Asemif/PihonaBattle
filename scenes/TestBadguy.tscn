@@ -6,7 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v0u3y"]
 size = Vector2(16, 48)
 
-[node name="TestBadguy" type="CharacterBody2D"]
+[node name="TestBadguy" type="CharacterBody2D" groups=["badguy"]]
+collision_layer = 5
+collision_mask = 5
 script = ExtResource("1_n3thl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -15,3 +17,7 @@ texture = ExtResource("1_t5sev")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1
 shape = SubResource("RectangleShape2D_v0u3y")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
