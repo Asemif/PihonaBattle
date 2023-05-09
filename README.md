@@ -1,3 +1,3 @@
-# PihonaBattle
+# Strike Force Pihona
 
-This is 2D battle game about penguins
+Like strike force kitty but it's about penguins
