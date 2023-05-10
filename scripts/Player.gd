@@ -55,11 +55,12 @@ func _on_area_2d_body_entered(body):
 		direction *= -1
 	
 	if body.is_in_group("badguy"):
-		body.enemy = self
-		body.get_node("Timer").start()
-		
-		enemy = body
-		$Timer.start()
+		if body.enemy == null:
+			body.enemy = self
+			body.get_node("Timer").start()
+			
+			enemy = body
+			$Timer.start()
 
 func _on_timer_timeout():
 	if enemy != null:

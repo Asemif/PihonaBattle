@@ -38,7 +38,7 @@ texture = ExtResource("3_p8jsq")
 centered = false
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="Winter"]
-motion_scale = Vector2(1.25, 1.25)
+motion_scale = Vector2(1.5, 1.5)
 motion_mirroring = Vector2(1152, 0)
 
 [node name="Clouds" type="Sprite2D" parent="Winter/ParallaxLayer3"]
