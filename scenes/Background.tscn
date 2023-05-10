@@ -1,13 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://d312at5tcx2d7"]
+[gd_scene load_steps=7 format=3 uid="uid://d312at5tcx2d7"]
 
+[ext_resource type="Script" path="res://scripts/Background.gd" id="1_mseci"]
 [ext_resource type="Texture2D" uid="uid://dxhair0xkmkoa" path="res://sprites/bg/winter_sky0.png" id="1_ymdqw"]
 [ext_resource type="Texture2D" uid="uid://f5efebdjh4wu" path="res://sprites/bg/winter_sky1.png" id="2_6gpej"]
 [ext_resource type="Texture2D" uid="uid://hqg1ybqsirgy" path="res://sprites/bg/winter_sky2.png" id="3_p8jsq"]
 [ext_resource type="Texture2D" uid="uid://dgaqd7vf6a8n0" path="res://sprites/bg/clouds.png" id="4_eas5w"]
+[ext_resource type="Texture2D" uid="uid://opsrxsikh4cy" path="res://sprites/bg/sky.png" id="6_bnq8c"]
 
 [node name="Background" type="Node2D"]
+script = ExtResource("1_mseci")
+bg_name = "Default"
 
-[node name="Winter" type="ParallaxBackground" parent="."]
+[node name="Winter" type="ParallaxBackground" parent="." groups=["background"]]
+visible = false
 
 [node name="ParallaxLayer0" type="ParallaxLayer" parent="Winter"]
 motion_scale = Vector2(0, 0)
@@ -42,6 +47,27 @@ motion_scale = Vector2(1.5, 1.5)
 motion_mirroring = Vector2(1152, 0)
 
 [node name="Clouds" type="Sprite2D" parent="Winter/ParallaxLayer3"]
+scale = Vector2(2, 2)
+texture = ExtResource("4_eas5w")
+centered = false
+
+[node name="Default" type="ParallaxBackground" parent="." groups=["background"]]
+
+[node name="ParallaxLayer0" type="ParallaxLayer" parent="Default"]
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sky" type="Sprite2D" parent="Default/ParallaxLayer0"]
+texture_filter = 1
+scale = Vector2(1.125, 1.125)
+texture = ExtResource("6_bnq8c")
+centered = false
+
+[node name="ParallaxLayer1" type="ParallaxLayer" parent="Default"]
+motion_scale = Vector2(1.5, 1.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Clouds" type="Sprite2D" parent="Default/ParallaxLayer1"]
 scale = Vector2(2, 2)
 texture = ExtResource("4_eas5w")
 centered = false
