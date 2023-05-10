@@ -9,13 +9,12 @@
 
 [node name="Background" type="Node2D"]
 script = ExtResource("1_mseci")
-bg_name = "Default"
 
 [node name="Winter" type="ParallaxBackground" parent="." groups=["background"]]
 visible = false
 
 [node name="ParallaxLayer0" type="ParallaxLayer" parent="Winter"]
-motion_scale = Vector2(0, 0)
+motion_scale = Vector2(0.1, 0.1)
 motion_mirroring = Vector2(1152, 0)
 
 [node name="WinterSky0" type="Sprite2D" parent="Winter/ParallaxLayer0"]
@@ -54,7 +53,7 @@ centered = false
 [node name="Default" type="ParallaxBackground" parent="." groups=["background"]]
 
 [node name="ParallaxLayer0" type="ParallaxLayer" parent="Default"]
-motion_scale = Vector2(0, 0)
+motion_scale = Vector2(0.1, 0.1)
 motion_mirroring = Vector2(1152, 0)
 
 [node name="Sky" type="Sprite2D" parent="Default/ParallaxLayer0"]

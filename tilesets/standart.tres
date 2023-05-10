@@ -1,8 +1,9 @@
-[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://cqs2c63ax1iti"]
+[gd_resource type="TileSet" load_steps=8 format=3 uid="uid://cpmgj0yce0ds"]
 
 [ext_resource type="Texture2D" uid="uid://bjdjjevwfaftx" path="res://sprites/tilesets/antarctic.png" id="1_71lj1"]
 [ext_resource type="PackedScene" uid="uid://bsru02op2l2fm" path="res://scenes/Flip.tscn" id="2_tom6c"]
-[ext_resource type="PackedScene" uid="uid://dbda6ouipunpm" path="res://scenes/TestBadguy.tscn" id="3_snmqp"]
+[ext_resource type="PackedScene" uid="uid://dbda6ouipunpm" path="res://scenes/badguys/TestBadguy.tscn" id="3_meifd"]
+[ext_resource type="Texture2D" uid="uid://xxoth0fbi7yj" path="res://sprites/tilesets/characters.png" id="4_k6i8m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eccin"]
 texture = ExtResource("1_71lj1")
@@ -365,9 +366,34 @@ texture = ExtResource("1_71lj1")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_t14hk"]
 scenes/1/scene = ExtResource("2_tom6c")
-scenes/2/scene = ExtResource("3_snmqp")
+scenes/2/scene = ExtResource("3_meifd")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ej7yf"]
+texture = ExtResource("4_k6i8m")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
 
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_eccin")
 sources/1 = SubResource("TileSetScenesCollectionSource_t14hk")
+sources/3 = SubResource("TileSetAtlasSource_ej7yf")

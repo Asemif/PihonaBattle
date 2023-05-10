@@ -39,8 +39,14 @@ func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	
-	if direction == 1: $Sprite2D.flip_h = false
-	elif direction == -1: $Sprite2D.flip_h = true
+	if direction == 1: 
+		$Sprite2D.flip_h = false
+		$Sprite2D.play("walk")
+	elif direction == -1: 
+		$Sprite2D.flip_h = true
+		$Sprite2D.play("walk")
+	else:
+		$Sprite2D.play("idle")
 	
 	if enemy == null:
 		if direction:
