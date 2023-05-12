@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d312at5tcx2d7"]
+[gd_scene load_steps=10 format=3 uid="uid://d312at5tcx2d7"]
 
 [ext_resource type="Script" path="res://scripts/Background.gd" id="1_mseci"]
 [ext_resource type="Texture2D" uid="uid://dxhair0xkmkoa" path="res://sprites/bg/winter_sky0.png" id="1_ymdqw"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://hqg1ybqsirgy" path="res://sprites/bg/winter_sky2.png" id="3_p8jsq"]
 [ext_resource type="Texture2D" uid="uid://dgaqd7vf6a8n0" path="res://sprites/bg/clouds.png" id="4_eas5w"]
 [ext_resource type="Texture2D" uid="uid://opsrxsikh4cy" path="res://sprites/bg/sky.png" id="6_bnq8c"]
+[ext_resource type="Texture2D" uid="uid://2sq3ty8t12x4" path="res://sprites/bg/ptp/forest_blue.png" id="7_cgudq"]
+[ext_resource type="Texture2D" uid="uid://dkhbu78ip88q4" path="res://sprites/bg/ptp/forest_clouds.png" id="8_tqugd"]
+[ext_resource type="Texture2D" uid="uid://cdwihww623qvb" path="res://sprites/bg/ptp/forest_trees.png" id="9_4d4o8"]
 
 [node name="Background" type="Node2D"]
 script = ExtResource("1_mseci")
@@ -51,6 +54,7 @@ texture = ExtResource("4_eas5w")
 centered = false
 
 [node name="Default" type="ParallaxBackground" parent="." groups=["background"]]
+visible = false
 
 [node name="ParallaxLayer0" type="ParallaxLayer" parent="Default"]
 motion_scale = Vector2(0.1, 0.1)
@@ -69,4 +73,31 @@ motion_mirroring = Vector2(1152, 0)
 [node name="Clouds" type="Sprite2D" parent="Default/ParallaxLayer1"]
 scale = Vector2(2, 2)
 texture = ExtResource("4_eas5w")
+centered = false
+
+[node name="ForestPTP" type="ParallaxBackground" parent="." groups=["background"]]
+
+[node name="ParallaxLayer0" type="ParallaxLayer" parent="ForestPTP"]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sky" type="Sprite2D" parent="ForestPTP/ParallaxLayer0"]
+texture_filter = 1
+texture = ExtResource("7_cgudq")
+centered = false
+
+[node name="ParallaxLayer1" type="ParallaxLayer" parent="ForestPTP"]
+motion_scale = Vector2(1.5, 1.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Clouds" type="Sprite2D" parent="ForestPTP/ParallaxLayer1"]
+texture = ExtResource("8_tqugd")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ForestPTP"]
+motion_scale = Vector2(0.75, 0.75)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Trees" type="Sprite2D" parent="ForestPTP/ParallaxLayer2"]
+texture = ExtResource("9_4d4o8")
 centered = false

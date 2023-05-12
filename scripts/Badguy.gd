@@ -5,7 +5,7 @@ var enemy
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @export var hp = 3
-@export var damage = 3
+@export var damage = 1
 @export var damage_speed = 1
 
 func _ready():

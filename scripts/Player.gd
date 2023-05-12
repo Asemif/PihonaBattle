@@ -6,9 +6,11 @@ const JUMP_VELOCITY = -400.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-@export var hp = 3
+@export var max_health = 5
 @export var damage = 1
-@export var damage_speed = 1
+@export var damage_speed = 0.75
+
+var hp = max_health
 
 var direction = 1
 var enemy
@@ -24,8 +26,9 @@ func _physics_process(delta):
 	if position.y >= 700:
 		hp = 0
 	
-	if hp == 0:
-		hp = 3
+	if hp <= 0:
+		hp = max_health
+		enemy = null
 		position = GlobalLevel.spawn_pos
 		direction = GlobalLevel.spawn_direction
 	
@@ -33,22 +36,22 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	# Handle Jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor() and enemy == null:
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	
-	if direction == 1: 
-		$Sprite2D.flip_h = false
-		$Sprite2D.play("walk")
-	elif direction == -1: 
-		$Sprite2D.flip_h = true
-		$Sprite2D.play("walk")
-	else:
-		$Sprite2D.play("idle")
-	
 	if enemy == null:
+		if direction == 1: 
+			$Sprite2D.flip_h = false
+			$Sprite2D.play("walk")
+		elif direction == -1: 
+			$Sprite2D.flip_h = true
+			$Sprite2D.play("walk")
+		else:
+			$Sprite2D.play("idle")
+			
 		if direction:
 			velocity.x = direction * SPEED
 		else:
