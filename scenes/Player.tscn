@@ -1,15 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://mvhfrtl0ln5l"]
+[gd_scene load_steps=11 format=3 uid="uid://mvhfrtl0ln5l"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_5s2e2"]
 [ext_resource type="Texture2D" uid="uid://cylkcuaql4qak" path="res://sprites/player/ptp/0.png" id="2_e1dy5"]
-[ext_resource type="Texture2D" uid="uid://bda7bcj7sijf4" path="res://sprites/player/ptp/2.png" id="3_b4ysy"]
 [ext_resource type="FontFile" uid="uid://bel6ai2sky0ao" path="res://fonts/Pixel.ttf" id="3_ppmh2"]
-[ext_resource type="Texture2D" uid="uid://bm8utmwihnf4c" path="res://sprites/player/ptp/3.png" id="4_ospo2"]
 [ext_resource type="Texture2D" uid="uid://cpb3gvn71y2lf" path="res://sprites/player/ptp/1.png" id="5_t8rpq"]
-[ext_resource type="Texture2D" uid="uid://batijempmka3u" path="res://sprites/player/ptp/4.png" id="6_07mxh"]
 [ext_resource type="Texture2D" uid="uid://cfmqf6gvjhkkw" path="res://sprites/items/weapons/spear.png" id="6_8dyt6"]
 [ext_resource type="Texture2D" uid="uid://dtldvjlm4vhsg" path="res://sprites/items/head/ninja.png" id="6_gvn4s"]
-[ext_resource type="Texture2D" uid="uid://db3tmh80c06df" path="res://sprites/player/ptp/5.png" id="7_887sq"]
 [ext_resource type="Texture2D" uid="uid://yj8d8vbwdyr" path="res://sprites/items/torso/ninja.png" id="8_uhr6e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t77yo"]
@@ -27,36 +23,10 @@ animations = [{
 "texture": ExtResource("2_e1dy5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_b4ysy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_ospo2")
-}, {
-"duration": 1.0,
 "texture": ExtResource("5_t8rpq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_ospo2")
 }],
 "loop": true,
 "name": &"walk",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_e1dy5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_07mxh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_887sq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_07mxh")
-}],
-"loop": true,
-"name": &"walk_costume",
 "speed": 8.0
 }]
 
@@ -74,7 +44,8 @@ texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_t77yo")
 animation = &"walk"
-frame_progress = 0.257968
+frame = 1
+frame_progress = 0.653936
 
 [node name="Head" type="Sprite2D" parent="."]
 visible = false
