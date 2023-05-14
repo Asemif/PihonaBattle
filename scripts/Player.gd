@@ -30,6 +30,7 @@ func _physics_process(delta):
 	
 	if hp <= 0:
 		hp = max_health
+		enemy.enemy = null
 		enemy = null
 		position = GlobalLevel.spawn_pos
 		direction = GlobalLevel.spawn_direction

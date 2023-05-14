@@ -6,7 +6,7 @@
 
 [node name="test" type="Node2D" groups=["level"]]
 script = ExtResource("1_p6dle")
-spawn_pos = Vector2(64, 504)
+spawn_pos = Vector2(64, 440)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("2_wsosf")
