@@ -8,7 +8,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @export var max_health = 5
 @export var damage = 1
-@export var damage_speed = 0.75
+@export var damage_speed = 1
 
 var hp = max_health
 
@@ -16,7 +16,7 @@ var direction = 1
 var enemy
 
 func _ready():
-	$Timer.wait_time = damage_speed
+	$Timer.wait_time = (damage_speed/2)
 	
 func _physics_process(delta):
 	# Add the gravity.

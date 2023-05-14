@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GlobalLevel="*res://scripts/GlobalLevel.gd"
+GlobalPlayer="*res://scripts/GlobalPlayer.gd"
 
 [display]
 

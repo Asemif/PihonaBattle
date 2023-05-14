@@ -1,6 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://bwo0d30v4nnyg"]
 
-[ext_resource type="Texture2D" uid="uid://d0h6fav0sfbyk" path="res://sprites/items/shmot.png" id="1_mmpy7"]
+[ext_resource type="Texture2D" uid="uid://dpye6jn3luetu" path="res://sprites/items/costume/ninja_icon.png" id="1_vj551"]
 
 [node name="InventoryItem" type="TextureButton"]
-texture_normal = ExtResource("1_mmpy7")
+texture_filter = 1
+offset_bottom = 32.0
+texture_normal = ExtResource("1_vj551")
