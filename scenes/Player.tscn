@@ -109,6 +109,7 @@ debug_color = Color(0.701961, 0, 0, 0.419608)
 [node name="Timer" type="Timer" parent="."]
 
 [node name="HPLabel" type="Label" parent="."]
+visible = false
 offset_left = -17.0
 offset_top = -44.0
 offset_right = 17.0

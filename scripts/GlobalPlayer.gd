@@ -1,3 +1,4 @@
 extends Node
 
-var energy = 0
+var hp = 0
+var coin = 0

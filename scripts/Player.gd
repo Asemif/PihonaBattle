@@ -21,6 +21,8 @@ func _ready():
 func _physics_process(delta):
 	# Add the gravity.
 	
+	GlobalPlayer.hp = hp
+	
 	$HPLabel.text = str(hp)
 	
 	if position.y >= 700:
